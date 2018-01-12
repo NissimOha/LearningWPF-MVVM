@@ -1,0 +1,5 @@
+C:\Users\NISSIMOHAYON\Documents\Proggreming\wpf\LinesCalculator\LinesClaculatorBL\bin\Debug\LinesClaculatorBL.dll
+C:\Users\NISSIMOHAYON\Documents\Proggreming\wpf\LinesCalculator\LinesClaculatorBL\bin\Debug\LinesClaculatorBL.pdb
+C:\Users\NISSIMOHAYON\Documents\Proggreming\wpf\LinesCalculator\LinesClaculatorBL\obj\Debug\LinesClaculatorBL.csprojResolveAssemblyReference.cache
+C:\Users\NISSIMOHAYON\Documents\Proggreming\wpf\LinesCalculator\LinesClaculatorBL\obj\Debug\LinesClaculatorBL.dll
+C:\Users\NISSIMOHAYON\Documents\Proggreming\wpf\LinesCalculator\LinesClaculatorBL\obj\Debug\LinesClaculatorBL.pdb

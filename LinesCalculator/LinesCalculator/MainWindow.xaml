@@ -1,0 +1,20 @@
+﻿<Window x:Class="LinesCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LinesCalculator"
+        xmlns:FolderCalculator="clr-namespace:LinesCalculator.FolderCalculator"
+        mc:Ignorable="d"
+        Title="Line Calculator" Height="500" Width="650" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+        <local:FileCalculatorView HorizontalAlignment="Center" Margin="10,10,10,0" VerticalAlignment="Top"/>
+
+        <FolderCalculator:FolderCalculatorView Grid.Row="1" HorizontalAlignment="Center" Margin="10,10,10,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
