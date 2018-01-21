@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook", "PhoneBook\PhoneBook.csproj", "{137DAC27-D144-4D68-B27F-DC5940850531}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBookBL", "PhoneBookBL\PhoneBookBL.csproj", "{46B3198B-4869-40F3-9743-DF9A6080EA98}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "PhoneBookDB", "PhoneBookDB\PhoneBookDB.sqlproj", "{3628258C-1F35-4B1C-B126-75FBF4831AA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{137DAC27-D144-4D68-B27F-DC5940850531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{137DAC27-D144-4D68-B27F-DC5940850531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{137DAC27-D144-4D68-B27F-DC5940850531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{137DAC27-D144-4D68-B27F-DC5940850531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B3198B-4869-40F3-9743-DF9A6080EA98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B3198B-4869-40F3-9743-DF9A6080EA98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B3198B-4869-40F3-9743-DF9A6080EA98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B3198B-4869-40F3-9743-DF9A6080EA98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3628258C-1F35-4B1C-B126-75FBF4831AA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3628258C-1F35-4B1C-B126-75FBF4831AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3628258C-1F35-4B1C-B126-75FBF4831AA5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3628258C-1F35-4B1C-B126-75FBF4831AA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3628258C-1F35-4B1C-B126-75FBF4831AA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3628258C-1F35-4B1C-B126-75FBF4831AA5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

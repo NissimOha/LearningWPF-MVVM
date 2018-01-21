@@ -1,0 +1,64 @@
+﻿<Window x:Class="PhoneBook.View.AdditionView"
+        x:Name="AdditionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PhoneBook.ViewModel"
+        xmlns:vm="clr-namespace:PhoneBook"
+        mc:Ignorable="d"
+        Title="AdditionView" Height="350" Width="300" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <vm:MyValueConverter x:Key="MyValueConverter" />
+    </Window.Resources>
+    <Window.DataContext>
+        <local:AdditionViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="First Name:" Margin="15"/>
+            <TextBlock Text="Last Name:" Margin="15"/>
+            <TextBlock Text="Phone Number:" Margin="15"/>
+            <TextBlock Text="Address" Margin="15"/>
+            <TextBlock Text="Image" Margin="15"/>
+            <TextBox Visibility="Hidden" Name="id" Text="{Binding Id}"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Column="1">
+            <TextBox Margin="15" Name="firstName"/>
+            <TextBox Margin="15" Name="lastName"/>
+            <TextBox Margin="15" Name="phoneNumber"/>
+            <TextBox Margin="15" Name="address"/>
+            <Button Margin="15" Name="import" Width="50" Height="50" Command="{Binding ImportImageCommand}">
+                <Image Source="{Binding Image}" Width="50" Height="50"/>
+            </Button>
+            <TextBox Margin="15" Name="image" Visibility="Hidden" Text="{Binding Image}"/>
+        </StackPanel>
+
+        <Button Grid.Column="1" Grid.Row="1" Margin="15" Content="Close" Command="{Binding CancleRecordCommand}" CommandParameter="{Binding ElementName=AdditionWindow}"/>
+
+        <Button Grid.Column="0" Grid.Row="1" Margin="15" Content="Save" Command="{Binding SaveRecordCommand}">
+            <Button.CommandParameter>
+                <MultiBinding Converter="{StaticResource MyValueConverter}">
+                    <Binding Path="Text" ElementName="id"/>
+                    <Binding Path="Text" ElementName="firstName"/>
+                    <Binding Path="Text" ElementName="lastName"/>
+                    <Binding Path="Text" ElementName="phoneNumber"/>
+                    <Binding Path="Text" ElementName="address"/>
+                    <Binding Path="Text" ElementName="image"/>
+                </MultiBinding>
+            </Button.CommandParameter>
+        </Button>
+
+    </Grid>
+</Window>
