@@ -39,18 +39,34 @@ namespace PhoneBook.ViewModel
 
         private async void BeckUpRecord()
         {
-            await m_recordRepository.BeckUpToDB(m_records);
+            var result = MessageBox.Show(SAVE_MSG, string.Empty, MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (result == MessageBoxResult.Yes)
+            {
+                await m_recordRepository.BeckUpToDB(m_records);
+                MessageBox.Show(SAVED_MSG, string.Empty, MessageBoxButton.OK);
+            }
         }
 
         private async void DeleteItems(object p_ob)
         {
-            Records = await m_recordRepository.DeleteRecords(p_ob as ObservableCollection<object>, Records);
+            if ((p_ob as ObservableCollection<object>).Count == 0) return;
+            var result = MessageBox.Show(DELETE_MSG, string.Empty, MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (result == MessageBoxResult.Yes)
+            {
+                Records = await m_recordRepository.DeleteRecords(p_ob as ObservableCollection<object>, Records);
+                MessageBox.Show(DELETED_MSG, string.Empty, MessageBoxButton.OK);
+            }
         }
 
         // Property for the Command. (RelayCommand is a helper class that wraps ICommand).
         public RelayCommand AddRecordCommand { get; set; }
         public RelayCommand BeckUpRecordCommand { get; set; }
         public RelayCommand<object> DeleteRecordCommand { get; set; }
+
+        private const string SAVE_MSG = "?האם אתה בטוח שברצונך לשמור את השינויים";
+        private const string DELETE_MSG = "?האם אתה בטוח שברצונך למחוק את אנשי הקשר המסומנים";
+        private const string SAVED_MSG = "נשמר";
+        private const string DELETED_MSG = "נמחק";
 
         private RecordRepository m_recordRepository;
         private ObservableCollection<Record> m_records;
