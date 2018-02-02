@@ -1,0 +1,5 @@
+C:\Users\NISSIMOHAYON\Documents\Proggreming\wpf\Login\LoginProject\LoginProjectBL\bin\Debug\LoginProjectBL.dll
+C:\Users\NISSIMOHAYON\Documents\Proggreming\wpf\Login\LoginProject\LoginProjectBL\bin\Debug\LoginProjectBL.pdb
+C:\Users\NISSIMOHAYON\Documents\Proggreming\wpf\Login\LoginProject\LoginProjectBL\obj\Debug\LoginProjectBL.dll
+C:\Users\NISSIMOHAYON\Documents\Proggreming\wpf\Login\LoginProject\LoginProjectBL\obj\Debug\LoginProjectBL.pdb
+C:\Users\NISSIMOHAYON\Documents\Proggreming\wpf\Login\LoginProject\LoginProjectBL\obj\Debug\LoginProjectBL.csprojResolveAssemblyReference.cache

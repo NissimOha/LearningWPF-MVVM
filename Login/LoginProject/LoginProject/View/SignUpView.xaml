@@ -1,0 +1,97 @@
+﻿<Window x:Class="LoginProject.View.SignUpView"
+        x:Name="SignUpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoginProject.View"
+        xmlns:vm="clr-namespace:LoginProject.ViewModel"
+        xmlns:lp="clr-namespace:LoginProject"
+        mc:Ignorable="d"
+        Title="הרשמה" Height="580" Width="380" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <vm:SignUpViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <lp:UserConverter x:Key="UserConverter"/>
+        <Style x:Key="myButtonStyle"
+           TargetType="Button">
+            <Setter Property="Width"
+              Value="70" />
+            <Setter Property="Height"
+              Value="30" />
+            <Setter Property="VerticalAlignment"
+              Value="Top" />
+            <Setter Property="Margin"
+              Value="10" />
+            <Setter Property="Background"
+              Value="DeepSkyBlue" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Margin="10" Source="{Binding Logo}" Grid.ColumnSpan="2"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="10" Orientation="Vertical">
+        
+            <TextBlock Text=":תעודת זהות" Margin="10" HorizontalAlignment="Right" FontSize="15"/>
+            <TextBlock Text=":שם פרטי" Margin="10" HorizontalAlignment="Right" FontSize="15"/>
+            <TextBlock Text=":שם משפחה" Margin="10" HorizontalAlignment="Right" FontSize="15"/>
+            <TextBlock Text=":כתובת" Margin="10" HorizontalAlignment="Right" FontSize="15"/>
+            <TextBlock Text=":טלפון" Margin="10" HorizontalAlignment="Right" FontSize="15"/>
+            <TextBlock Text=":דואר אלקטרוני" Margin="10" HorizontalAlignment="Right" FontSize="15"/>
+            <TextBlock Text=":שם משתמש" Margin="10" HorizontalAlignment="Right" FontSize="15"/>
+            <TextBlock Text=":סיסמה" Margin="10" HorizontalAlignment="Right" FontSize="15"/>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Margin="10" Orientation="Vertical">
+
+            <TextBox Margin="10" HorizontalAlignment="Right" Width="140" Name="idTextBox" MaxLength="9" Background="{Binding ValidationIndicate[0]}" ToolTip="{Binding ToolTipIndication[0]}"/>
+            <TextBox Margin="10" HorizontalAlignment="Right" Width="140" Name="fnTextBox" MaxLength="30" Background="{Binding ValidationIndicate[1]}" ToolTip="{Binding ToolTipIndication[1]}"/>
+            <TextBox Margin="10" HorizontalAlignment="Right" Width="140" Name="lnTextBox" MaxLength="30" Background="{Binding ValidationIndicate[2]}" ToolTip="{Binding ToolTipIndication[2]}"/>
+            <TextBox Margin="10" HorizontalAlignment="Right" Width="140" Name="addressTextBox" MaxLength="50" Background="{Binding ValidationIndicate[3]}" ToolTip="{Binding ToolTipIndication[3]}"/>
+            <TextBox Margin="10" HorizontalAlignment="Right" Width="140" Name="pnTextBox" MaxLength="10" Background="{Binding ValidationIndicate[4]}" ToolTip="{Binding ToolTipIndication[4]}"/>
+            <TextBox Margin="10" HorizontalAlignment="Right" Width="140" Name="emailTextBox" MaxLength="50" Background="{Binding ValidationIndicate[5]}" ToolTip="{Binding ToolTipIndication[5]}"/>
+            <TextBox Margin="10" HorizontalAlignment="Right" Width="140" Name="unTextBox" MaxLength="20" Background="{Binding ValidationIndicate[6]}" ToolTip="{Binding ToolTipIndication[6]}"/>
+            <PasswordBox Margin="10" HorizontalAlignment="Right" Width="140" x:Name="passTextBox" MaxLength="10" 
+                       lp:PasswordHelper.Attach="True" Background="{Binding ValidationIndicate[7]}" ToolTip="{Binding ToolTipIndication[7]}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal">
+
+            <Button Style="{StaticResource myButtonStyle}" Content="סגור" Command="{Binding CloseCommand}" CommandParameter="{Binding ElementName=SignUpWindow}"/>
+
+            <Button Content="הירשם" Style="{StaticResource myButtonStyle}"
+                IsEnabled="{Binding IsEnable}" Command="{Binding RegisterCommand}">
+
+                <Button.CommandParameter>
+                    <MultiBinding Converter="{StaticResource UserConverter}">
+                        <Binding Path="Text" ElementName="idTextBox"/>
+                        <Binding Path="Text" ElementName="fnTextBox"/>
+                        <Binding Path="Text" ElementName="lnTextBox"/>
+                        <Binding Path="Text" ElementName="addressTextBox"/>
+                        <Binding Path="Text" ElementName="pnTextBox"/>
+                        <Binding Path="Text" ElementName="emailTextBox"/>
+                        <Binding Path="Text" ElementName="unTextBox"/>
+                        <Binding Path="(lp:PasswordHelper.Password)" ElementName="passTextBox" UpdateSourceTrigger="PropertyChanged"/>
+                    </MultiBinding>
+                </Button.CommandParameter>
+
+            </Button>
+
+        </StackPanel>
+
+        <TextBlock Grid.Row="2" Margin="10" Text="© Nissim Ohayon" HorizontalAlignment="Left"/>
+    </Grid>
+</Window>

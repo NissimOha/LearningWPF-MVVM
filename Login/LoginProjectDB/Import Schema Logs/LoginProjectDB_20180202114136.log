@@ -1,0 +1,83 @@
+02/02/2018 13:41:36	This log contains information about the import schema operation into project 'LoginProjectDB' on computer 'NISSIM' by user 'NISSIMOHAYON'.
+02/02/2018 13:41:36	Import of database schema has started.
+02/02/2018 13:41:48	Gathering database options
+02/02/2018 13:41:48	Gathering users
+02/02/2018 13:41:48	Gathering roles
+02/02/2018 13:41:48	Gathering application roles
+02/02/2018 13:41:48	Gathering role memberships
+02/02/2018 13:41:48	Gathering filegroups
+02/02/2018 13:41:48	Gathering full-text catalogs
+02/02/2018 13:41:48	Gathering assemblies
+02/02/2018 13:41:48	Gathering certificates
+02/02/2018 13:41:48	Gathering asymmetric keys
+02/02/2018 13:41:48	Gathering symmetric keys
+02/02/2018 13:41:48	Gathering encrypted symmetric keys
+02/02/2018 13:41:48	Gathering schemas
+02/02/2018 13:41:48	Gathering XML schema collections
+02/02/2018 13:41:48	Gathering user-defined data types
+02/02/2018 13:41:48	Gathering user-defined types
+02/02/2018 13:41:48	Gathering table types
+02/02/2018 13:41:48	Gathering unique keys for table types
+02/02/2018 13:41:48	Gathering primary keys for table types
+02/02/2018 13:41:48	Gathering indexes for table types
+02/02/2018 13:41:48	Gathering check constraints for table types
+02/02/2018 13:41:48	Gathering default constraints for table types
+02/02/2018 13:41:48	Gathering partition functions
+02/02/2018 13:41:48	Gathering partition schemes
+02/02/2018 13:41:48	Gathering functions
+02/02/2018 13:41:48	Gathering encrypted functions
+02/02/2018 13:41:48	Gathering aggregates
+02/02/2018 13:41:48	Gathering procedures
+02/02/2018 13:41:48	Gathering encrypted procedures
+02/02/2018 13:41:48	Gathering tables
+02/02/2018 13:41:48	Gathering primary keys
+02/02/2018 13:41:48	Gathering unique constraints
+02/02/2018 13:41:48	Gathering foreign keys
+02/02/2018 13:41:48	Gathering default constraints
+02/02/2018 13:41:48	Gathering check constraints
+02/02/2018 13:41:48	Gathering views
+02/02/2018 13:41:48	Gathering encrypted views
+02/02/2018 13:41:48	Gathering indexes
+02/02/2018 13:41:48	Gathering statistics
+02/02/2018 13:41:48	Gathering full-text index stoplists
+02/02/2018 13:41:48	Gathering search property lists
+02/02/2018 13:41:48	Gathering search properties
+02/02/2018 13:41:48	Gathering full-text indexes
+02/02/2018 13:41:48	Gathering column store indexes
+02/02/2018 13:41:48	Gathering spatial indexes
+02/02/2018 13:41:48	Gathering XML indexes
+02/02/2018 13:41:48	Gathering Selective XML indexes
+02/02/2018 13:41:48	Gathering encrypted triggers
+02/02/2018 13:41:48	Gathering triggers
+02/02/2018 13:41:48	Gathering encrypted and clr ddl triggers
+02/02/2018 13:41:48	Gathering ddl triggers
+02/02/2018 13:41:48	Gathering synonyms
+02/02/2018 13:41:48	Gathering defaults
+02/02/2018 13:41:48	Gathering data constraint uddt bindings
+02/02/2018 13:41:48	Gathering rules
+02/02/2018 13:41:48	Gathering data constraint uddt bindings
+02/02/2018 13:41:48	Gathering message types
+02/02/2018 13:41:48	Gathering queues
+02/02/2018 13:41:48	Gathering contracts
+02/02/2018 13:41:48	Gathering services
+02/02/2018 13:41:48	Gathering event notifications
+02/02/2018 13:41:48	Gathering remote service bindings
+02/02/2018 13:41:48	Gathering broker priorities
+02/02/2018 13:41:48	Gathering signatures
+02/02/2018 13:41:48	Gathering data compression options
+02/02/2018 13:41:48	Gathering sequence types
+02/02/2018 13:41:48	Gathering security policies
+02/02/2018 13:41:48	Gather column encryption keys
+02/02/2018 13:41:48	Gathering column master keys
+02/02/2018 13:41:48	Gathering external data sources
+02/02/2018 13:41:48	Gathering external file formats
+02/02/2018 13:41:48	Gathering external tables
+02/02/2018 13:41:48	Gathering extended properties
+02/02/2018 13:41:48	Gathering credentials
+02/02/2018 13:41:48	Gathering logins
+02/02/2018 13:41:48	Gathering server audits
+02/02/2018 13:41:50	Scanning project for duplicate elements
+02/02/2018 13:41:50	Finished duplicate element processing
+02/02/2018 13:41:51	Finished importing database.
+02/02/2018 13:41:51	A summary of the import was saved to the following location: C:\Users\NISSIMOHAYON\Documents\Proggreming\wpf\Login\LoginProjectDB\Import Schema Logs\LoginProjectDB_20180202114136.log
+02/02/2018 13:41:51	Click Finish to continue...
